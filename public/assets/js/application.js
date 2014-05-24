@@ -17,6 +17,13 @@ jQuery(document).ready(function($) {
             $('#top').fadeOut(500);
         }
     });
+    
+    $('#top').click(function(e) {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 1000);
+        e.preventDefault();
+    });
 
     // sticky nav
     var nav      = $('nav#primary');
